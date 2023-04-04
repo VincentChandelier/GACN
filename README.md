@@ -20,7 +20,7 @@ to 32 categories based on their contents
 
 The original focused plenoptic images are available to download.()
 
-![](./assets/FPI2k.png)
+![](https://github.com/VincentChandelier/GACN/blob/main/asserts/FPI2k.png)
 ### Data preprocessing
 Based on the observations that inter-microimage pixels, 
 boundary incomplete microimages, and vignetting pixels in the 
@@ -30,7 +30,7 @@ lossless preprocessing scheme is proposed to reshape the
 sub-aperture effective pixels in each microimage and align the 
 cropped microimages to the rectangular grid to be compatible 
 with patch-based training and to reduce the pixel redundancy.
-![](./assets/preprocessing.png)
+![](https://github.com/VincentChandelier/GACN/blob/main/asserts/preprocessing.png)
 
 The preprocessed focused plenoptic images are available to download.()
 
@@ -46,7 +46,7 @@ focused plenoptic images.
 Run the *./Rendering/Preprocessed2SAI.m* to rendering the sub-aperture images from preprocessd focused plenoptic images.
 
 ## Global Attention Compression Network (GACN)
-![](./assets/Network.png)
+![](https://github.com/VincentChandelier/GACN/blob/main/asserts/Network.png)
 ### Installation
 
 Install [CompressAI](https://github.com/InterDigitalInc/CompressAI) and the packages required for development.
@@ -90,28 +90,28 @@ Pretrained models (optimized for MSE) trained from focused plenoptic image patch
 
 | Method | Lambda | Link                                                                                              |
 | ---- |--------|---------------------------------------------------------------------------------------------------|
-| Proposed | 0.1 | []()    |
-| Proposed | 0.05  | []()     |
-| Proposed | 0.025 | []() |
-| Proposed | 0.01 | []()    |
-| Proposed | 0.005 | []() |
-| Proposed | 0.013  | []()  |
+| Proposed | 0.1 | [GACN_0.1](https://drive.google.com/file/d/1pVP3zWVkSJo00aT8bob72kr6Zd3Bg58p/view?usp=sharing)    |
+| Proposed | 0.05  | [GACN_0.05](https://drive.google.com/file/d/1fvko3FyRBLLOumXCALxz7QJRnTew4zSc/view?usp=sharing)     |
+| Proposed | 0.025 | [GACN_0.025](https://drive.google.com/file/d/1FRdLcFrqdBqfZXRhKhp2BCIkj36nabvh/view?usp=sharing) |
+| Proposed | 0.01 | [GACN_0.01](https://drive.google.com/file/d/10p0mM39xzAGm1VpUNmdyRp6kCvNS5GoW/view?usp=sharing)    |
+| Proposed | 0.005 | [GACN_0.005](https://drive.google.com/file/d/1FvGB882FdJ8rCEYkq0Wixa24ypuQiYLz/view?usp=sharing) |
+| Proposed | 0.013  | [GACN_0.001](https://drive.google.com/file/d/1UNU6rzXuIsMkDz75WDLzrg8ViOw-8Gc8/view?usp=sharing)  |
 
-All the checkpoints are available at
+All the checkpoints are available at 
 
 ## Results
 
 ### Visualization
 
-![visualization](/assets/Visualization.png)
+![visualization](https://github.com/VincentChandelier/GACN/blob/main/asserts/Visualization.png)
 >  Visualization of the reconstructed central sub-aperture image of "Car".
 
 ### RD curves
  Visualization of the reconstructed image Car.
  RD curves on I01 "Cars"
-![original_rd](./assets/RdcurveOriginal.png)
-![preprocessing_rd](./assets/RdcurvePreprocessed.png)
-![reordering_rd](./assets/RdcurveReordering.png)
+![original_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/RdcurveOriginal.png)
+![preprocessing_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/RdcurvePreprocessed.png)
+![reordering_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/RdcurveReordering.png)
 
 ## Citation
 ```
