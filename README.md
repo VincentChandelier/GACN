@@ -13,12 +13,12 @@ Preprocessing and Global Attention".
 ## data
  Data |  Link                                                                                              |
 | ----|---------------------------------------------------------------------------------------------------|
-| FPI2kOriginal | [FPI2kOriginal]()    |
+| FPI2kOriginal | [FPI2kOriginal](https://pan.baidu.com/s/1CQ9hKhxY1z-sIHsqr00XXg?pwd=xya8)    |
 | FPI2kPreprocesses | [FPI2kPreprocesses]()     |
 | white image | [white image](https://drive.google.com/file/d/1jaC2OsIWTVjTBicbBOrEr8-T1o4ZuTh0/view?usp=sharing) |
 | Training Patches | [Training Patches]()    |
-| Full-resolution images | [full-resolution images]() |
-| Checkpoints   | [Checkpoints]()|
+| Full-resolution Test images | [full-resolution test images](https://pan.baidu.com/s/1LSFfkxHW1inb04PVt3DwIA?pwd=5lvb) |
+| Checkpoints   | [Checkpoints](https://pan.baidu.com/s/1hsFpQic6bMRZFvcmbAN7-g?pwd=54rv)|
 
 ## dataset
 “FPI2k” is  a focused plenoptic image dataset with 1910 images captured from real 
@@ -28,7 +28,8 @@ generated with much larger disparities one from the others.
 1910 focused plenoptic images are captured and manually annotated 
 to 32 categories based on their contents
 
-The original focused plenoptic images are available to download.()
+The original focused plenoptic images are available to download.(https://pan.baidu.com/s/1CQ9hKhxY1z-sIHsqr00XXg?pwd=xya8, 
+access code:xya8)
 
 ![](https://github.com/VincentChandelier/GACN/blob/main/asserts/FPI2k.png)
 ### Data preprocessing
@@ -78,7 +79,7 @@ pip install tensorboardX
 
 ### traing dataset 
 The 75080 patches of preprocessed plenoptic images are available.
-The full-resolution test images are available.
+The [full-resolution test images](https://pan.baidu.com/s/1LSFfkxHW1inb04PVt3DwIA?pwd=5lvb) are available.
 
 ### Training
 An exemplary  training script with a rate-distortion loss is provided in
@@ -110,7 +111,7 @@ Pretrained models (optimized for MSE) trained from focused plenoptic image patch
 | Proposed | 0.005 | [GACN_0.005](https://drive.google.com/file/d/1FvGB882FdJ8rCEYkq0Wixa24ypuQiYLz/view?usp=sharing) |
 | Proposed | 0.013  | [GACN_0.001](https://drive.google.com/file/d/1UNU6rzXuIsMkDz75WDLzrg8ViOw-8Gc8/view?usp=sharing)  |
 
-All the checkpoints are available at 
+All the checkpoints are available at：https://pan.baidu.com/s/1hsFpQic6bMRZFvcmbAN7-g?pwd=54rv, access code：54rv
 
 ## Results
 
@@ -127,9 +128,9 @@ All the checkpoints are available at
 ![reordering_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/RdcurveReordering.png)
 
 RD curves on 20 test Images
-![AverageOriginal_rd]()
-![AveragePreprocessing_rd]()
-![AverageReordering_rd]()
+![AverageOriginal_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/AverageRdcurveOriginal.png)
+![AveragePreprocessing_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/AverageRdcurvePreprocessed.png)
+![AverageReordering_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/AverageRdcurveReordering.png)
 
 ## Citation
 ```
