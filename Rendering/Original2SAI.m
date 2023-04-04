@@ -31,7 +31,7 @@ for( iFile = 1:length(FileList) ) %length(FileList)
     if ~exist(['.\PatchMap\',ImageName,'_patchmaps.mat'],'file')
         patch_map = Patch_Size_Cal(Image,Center_map);
         patch_map(patch_map>28) = 28; 
-          %According to Guotai, the max depth is no more than 28
+          %According to Guotai, the max depth is no more than 28=mR=0.8*35
         save(['.\PatchMap\',ImageName,'_patchmaps'],'patch_map');
     else
         load(['.\PatchMap\',ImageName,'_patchmaps']);
