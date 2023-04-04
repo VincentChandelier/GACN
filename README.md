@@ -1,20 +1,30 @@
 
 # Learned Focused Plenoptic Image Compression with Microimage Preprocessing and Global Attention
 Pytorch implementation of the paper "Learned Focused Plenoptic Image Compression with Microimage 
-Preprocessing and Global Attention". TMM2023.
+Preprocessing and Global Attention". IEEE Transactions on Multimedia 2023.
 This repository is based on [CompressAI](https://github.com/InterDigitalInc/CompressAI). 
 We kept scripts for training and evaluation, and removed other components. 
  For the official code release, see the [CompressAI](https://github.com/InterDigitalInc/CompressAI).
 
 ## About
-This repo defines the focused plenoptic image dataset “FPI22k" and the global-attention-based models for learned focused plenoptic image compression in "Learned Focused Plenoptic Image Compression with Microimage 
+This repo defines the focused plenoptic image dataset “FPI2k" and the global-attention-based models for learned focused plenoptic image compression in "Learned Focused Plenoptic Image Compression with Microimage 
 Preprocessing and Global Attention".
+
+## data
+ Data |  Link                                                                                              |
+| ----|---------------------------------------------------------------------------------------------------|
+| FPI2kOriginal | [FPI2kOriginal]()    |
+| FPI2kPreprocesses | [FPI2kPreprocesses]()     |
+| white image | [white image](https://drive.google.com/file/d/1jaC2OsIWTVjTBicbBOrEr8-T1o4ZuTh0/view?usp=sharing) |
+| Training Patches | [Training Patches]()    |
+| Full-resolution images | [full-resolution images]() |
+| Checkpoints   | [Checkpoints]()|
 
 ## dataset
 “FPI2k” is  a focused plenoptic image dataset with 1910 images captured from real 
 scenes indoor and outdoor with object depth variations.
 From a single plenoptic image, 5×5 sub-aperture images can be 
-generated with much larger disparities one from the other.
+generated with much larger disparities one from the others.
 1910 focused plenoptic images are captured and manually annotated 
 to 32 categories based on their contents
 
@@ -26,17 +36,20 @@ Based on the observations that inter-microimage pixels,
 boundary incomplete microimages, and vignetting pixels in the 
 microimages are ineffective in light field applications, like 
 refocusing, multi-view rendering, etc., a sub-aperture images
-lossless preprocessing scheme is proposed to reshape the 
+the lossless preprocessing scheme is proposed to reshape the 
 sub-aperture effective pixels in each microimage and align the 
 cropped microimages to the rectangular grid to be compatible 
-with patch-based training and to reduce the pixel redundancy.
+with patch-based training and to reduce pixel redundancy.
 ![](https://github.com/VincentChandelier/GACN/blob/main/asserts/preprocessing.png)
 
 The preprocessed focused plenoptic images are available to download.()
 
 ### Rendering
-The dirctory Rendering provided the rendering code to render sub-aperture images from
- orignal or preprocessed focused plenoptic images
+The directory Rendering provided the rendering code to render sub-aperture images from
+ original or preprocessed focused plenoptic images
+ 
+Download the [white image coefficients](https://drive.google.com/file/d/1jaC2OsIWTVjTBicbBOrEr8-T1o4ZuTh0/view?usp=sharing)
+in *./Rendering/FocusedPlenopticRendering* for devigneting.
 
 Run the *./Rendering/Original2SAI.m* to rendering the sub-aperture images from original focused plenoptic images.
 
@@ -64,11 +77,11 @@ pip install tensorboardX
 ## Usage
 
 ### traing dataset 
-The 75080 patches of preprocessed plenoptic images ara available.
-The full resolution test images are available.
+The 75080 patches of preprocessed plenoptic images are available.
+The full-resolution test images are available.
 
 ### Training
-An examplary training script with a rate-distortion loss is provided in
+An exemplary  training script with a rate-distortion loss is provided in
 `train.py`. 
 
 Training a model:
@@ -79,10 +92,10 @@ python train.py -d ./dataset --model Proposed -e 50  -lr 1e-4 -n 8  --lambda 1e-
 ### Evaluation
 
 To evaluate a trained model, the evaluation script is:
-
 ```bash
 python Inference.py --dataset /path/to/image/folder/ --output_path /path/to/reconstruction/folder/ -m Proposed -p ./updatedCheckpoint/PLConvTrans01.pth.tar --patch 384
 ```
+More details can refer to Inference.sh
 
 
 ### Pretrained Models
@@ -112,6 +125,11 @@ All the checkpoints are available at
 ![original_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/RdcurveOriginal.png)
 ![preprocessing_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/RdcurvePreprocessed.png)
 ![reordering_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/RdcurveReordering.png)
+
+RD curves on 20 test Images
+![AverageOriginal_rd]()
+![AveragePreprocessing_rd]()
+![AverageReordering_rd]()
 
 ## Citation
 ```
