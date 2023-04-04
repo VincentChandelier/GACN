@@ -10,17 +10,17 @@ We kept scripts for training and evaluation, and removed other components.
 This repo defines the focused plenoptic image dataset “FPI2k" and the global-attention-based models for learned focused plenoptic image compression in "Learned Focused Plenoptic Image Compression with Microimage 
 Preprocessing and Global Attention".
 
-## data
+## Available data
  Data |  Link                                                                                              |
 | ----|---------------------------------------------------------------------------------------------------|
 | FPI2kOriginal | [FPI2kOriginal](https://pan.baidu.com/s/1CQ9hKhxY1z-sIHsqr00XXg?pwd=xya8)    |
-| FPI2kPreprocesses | [FPI2kPreprocesses]()     |
-| white image | [white image](https://drive.google.com/file/d/1jaC2OsIWTVjTBicbBOrEr8-T1o4ZuTh0/view?usp=sharing) |
+| FPI2kPreprocessed | [FPI2kPreprocessed]()     |
+| TSPC White image | [TSPC white image](https://drive.google.com/file/d/1jaC2OsIWTVjTBicbBOrEr8-T1o4ZuTh0/view?usp=sharing) |
 | Training Patches | [Training Patches]()    |
-| Full-resolution Test images | [full-resolution test images](https://pan.baidu.com/s/1LSFfkxHW1inb04PVt3DwIA?pwd=5lvb) |
+| Full-resolution Test images | [Full-resolution test images](https://pan.baidu.com/s/1LSFfkxHW1inb04PVt3DwIA?pwd=5lvb) |
 | Checkpoints   | [Checkpoints](https://pan.baidu.com/s/1hsFpQic6bMRZFvcmbAN7-g?pwd=54rv)|
 
-## dataset
+## Dataset
 “FPI2k” is  a focused plenoptic image dataset with 1910 images captured from real 
 scenes indoor and outdoor with object depth variations.
 From a single plenoptic image, 5×5 sub-aperture images can be 
@@ -41,6 +41,7 @@ the lossless preprocessing scheme is proposed to reshape the
 sub-aperture effective pixels in each microimage and align the 
 cropped microimages to the rectangular grid to be compatible 
 with patch-based training and to reduce pixel redundancy.
+
 ![](https://github.com/VincentChandelier/GACN/blob/main/asserts/preprocessing.png)
 
 The preprocessed focused plenoptic images are available to download.()
@@ -49,7 +50,7 @@ The preprocessed focused plenoptic images are available to download.()
 The directory Rendering provided the rendering code to render sub-aperture images from
  original or preprocessed focused plenoptic images
  
-Download the [white image coefficients](https://drive.google.com/file/d/1jaC2OsIWTVjTBicbBOrEr8-T1o4ZuTh0/view?usp=sharing)
+Download the [TSPC white image coefficients](https://drive.google.com/file/d/1jaC2OsIWTVjTBicbBOrEr8-T1o4ZuTh0/view?usp=sharing)
 in *./Rendering/FocusedPlenopticRendering* for devigneting.
 
 Run the *./Rendering/Original2SAI.m* to rendering the sub-aperture images from original focused plenoptic images.
@@ -60,7 +61,7 @@ focused plenoptic images.
 Run the *./Rendering/Preprocessed2SAI.m* to rendering the sub-aperture images from preprocessd focused plenoptic images.
 
 ## Global Attention Compression Network (GACN)
-![](https://github.com/VincentChandelier/GACN/blob/main/asserts/Network.png)
+![](asserts/Network.png)
 ### Installation
 
 Install [CompressAI](https://github.com/InterDigitalInc/CompressAI) and the packages required for development.
@@ -77,7 +78,7 @@ pip install tensorboardX
 
 ## Usage
 
-### traing dataset 
+### Traing dataset 
 The 75080 patches of preprocessed plenoptic images are available.
 The [full-resolution test images](https://pan.baidu.com/s/1LSFfkxHW1inb04PVt3DwIA?pwd=5lvb) are available.
 
@@ -117,20 +118,25 @@ All the checkpoints are available at：https://pan.baidu.com/s/1hsFpQic6bMRZFvcm
 
 ### Visualization
 
-![visualization](https://github.com/VincentChandelier/GACN/blob/main/asserts/Visualization.png)
+![visualization](asserts/Visualization.png)
 >  Visualization of the reconstructed central sub-aperture image of "Car".
 
 ### RD curves
  Visualization of the reconstructed image Car.
  RD curves on I01 "Cars"
-![original_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/RdcurveOriginal.png)
-![preprocessing_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/RdcurvePreprocessed.png)
-![reordering_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/RdcurveReordering.png)
+![original_rdI01](asserts/RdcurveOriginal.png)
+![preprocessing_rdI01](asserts/RdcurvePreprocessed.png)
+![reordering_rdI01](asserts/RdcurveReordering.png)
+
+RD curves on I15 "Matryoshka_170"
+![original_rdI15](asserts/RdcurveOriginalI15.png)
+![preprocessing_rdI15](asserts/RdcurvePreprocessedI15.png)
+![reordering_rdI15](asserts/RdcurveReorderingI15.png)
 
 RD curves on 20 test Images
-![AverageOriginal_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/AverageRdcurveOriginal.png)
-![AveragePreprocessing_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/AverageRdcurvePreprocessed.png)
-![AverageReordering_rd](https://github.com/VincentChandelier/GACN/blob/main/asserts/AverageRdcurveReordering.png)
+![AverageOriginal_rd](asserts/AverageRdcurveOriginal.png)
+![AveragePreprocessing_rd](asserts/AverageRdcurvePreprocessed.png)
+![AverageReordering_rd](asserts/AverageRdcurveReordering.png)
 
 ## Citation
 ```
