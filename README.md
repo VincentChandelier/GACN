@@ -52,7 +52,7 @@ with patch-based training and to reduce pixel redundancy.
 
 ![](https://github.com/VincentChandelier/GACN/blob/main/asserts/preprocessing.png)
 
-The preprocessed focused plenoptic images are available to download.()
+The preprocessed focused plenoptic images are available to download.(https://pan.baidu.com/s/1omfnFkK_XQpBrJyE6epkXQ?pwd=2hw0)
 
 # Rendering
 The directory Rendering provided the rendering code to render sub-aperture images from
