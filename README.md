@@ -6,21 +6,29 @@ This repository is based on [CompressAI](https://github.com/InterDigitalInc/Comp
 We kept scripts for training and evaluation, and removed other components. 
  For the official code release, see the [CompressAI](https://github.com/InterDigitalInc/CompressAI).
 
+## Table of Contents
+- [Available data](#Available data)
+- [Dataset](#Dataset)
+- [Rendering](Rendering)
+- [Global Attention Compression Network (GACN)](#Global Attention Compression Network (GACN))
 ## About
 This repo defines the focused plenoptic image dataset “FPI2k" and the global-attention-based models for learned focused plenoptic image compression in "Learned Focused Plenoptic Image Compression with Microimage 
 Preprocessing and Global Attention".
 
-## Available data
+# Available data
  Data |  Link                                                                                              |
 | ----|---------------------------------------------------------------------------------------------------|
-| FPI2kOriginal | [FPI2kOriginal](https://pan.baidu.com/s/1CQ9hKhxY1z-sIHsqr00XXg?pwd=xya8)    |
-| FPI2kPreprocessed | [FPI2kPreprocessed]()     |
-| TSPC White image | [TSPC white image](https://drive.google.com/file/d/1jaC2OsIWTVjTBicbBOrEr8-T1o4ZuTh0/view?usp=sharing) |
-| Training Patches | [Training Patches]()    |
-| Full-resolution Test images | [Full-resolution test images](https://pan.baidu.com/s/1LSFfkxHW1inb04PVt3DwIA?pwd=5lvb) |
-| Checkpoints   | [Checkpoints](https://pan.baidu.com/s/1hsFpQic6bMRZFvcmbAN7-g?pwd=54rv)|
+| FPI2k original images | [FPI2k original images](https://pan.baidu.com/s/1CQ9hKhxY1z-sIHsqr00XXg?pwd=xya8)    |
+| Packaged FPI2k original images | [Packaged FPI2k original images](https://pan.baidu.com/s/1UCCqHB0tfEKILJp0cHaucg?pwd=hy0j)    |
+| FPI2k preprocessed images| [FPI2k preprocessed images](https://pan.baidu.com/s/1omfnFkK_XQpBrJyE6epkXQ?pwd=2hw0)     |
+| Packaged FPI2k preprocessed images| [Packaged FPI2k preprocessed images](https://pan.baidu.com/s/1DkCbAQHN4UP3Cajug3uMjg?pwd=t98i)     |
+| TSPC white image | [TSPC white image](https://drive.google.com/file/d/1jaC2OsIWTVjTBicbBOrEr8-T1o4ZuTh0/view?usp=sharing) |
+| Training patches | [Training patches](https://pan.baidu.com/s/1hKjg0eXT_bkJfQn8z0z3VA?pwd=p4zm)    |
+| Packaged training patches | [Packaged training patches](https://pan.baidu.com/s/1MSn2dEriB1Wal2uOMQe6hg?pwd=daei)    |
+| Full-resolution test images | [Full-resolution test images](https://pan.baidu.com/s/1LSFfkxHW1inb04PVt3DwIA?pwd=5lvb) |
+| Model checkpoints   | [Model checkpoints](https://pan.baidu.com/s/1hsFpQic6bMRZFvcmbAN7-g?pwd=54rv)|
 
-## Dataset
+# Dataset
 “FPI2k” is  a focused plenoptic image dataset with 1910 images captured from real 
 scenes indoor and outdoor with object depth variations.
 From a single plenoptic image, 5×5 sub-aperture images can be 
@@ -32,7 +40,7 @@ The original focused plenoptic images are available to download.(https://pan.bai
 access code:xya8)
 
 ![](https://github.com/VincentChandelier/GACN/blob/main/asserts/FPI2k.png)
-### Data preprocessing
+## Data preprocessing
 Based on the observations that inter-microimage pixels, 
 boundary incomplete microimages, and vignetting pixels in the 
 microimages are ineffective in light field applications, like 
@@ -46,7 +54,7 @@ with patch-based training and to reduce pixel redundancy.
 
 The preprocessed focused plenoptic images are available to download.()
 
-### Rendering
+# Rendering
 The directory Rendering provided the rendering code to render sub-aperture images from
  original or preprocessed focused plenoptic images
  
@@ -60,9 +68,9 @@ focused plenoptic images.
 
 Run the *./Rendering/Preprocessed2SAI.m* to rendering the sub-aperture images from preprocessd focused plenoptic images.
 
-## Global Attention Compression Network (GACN)
+# Global Attention Compression Network (GACN)
 ![](asserts/Network.png)
-### Installation
+## Installation
 
 Install [CompressAI](https://github.com/InterDigitalInc/CompressAI) and the packages required for development.
 ```bash
@@ -82,6 +90,22 @@ pip install tensorboardX
 The 75080 patches of preprocessed plenoptic images are available.
 The [full-resolution test images](https://pan.baidu.com/s/1LSFfkxHW1inb04PVt3DwIA?pwd=5lvb) are available.
 
+### Available model
+- `Proposed`: GACN
+
+- `ProposedBasemodel`: GACN w/o GA
+
+- `Factor`:  End-to-end optimized image compression
+
+- `Hyper`: Variational image compression with a scale hyperprior
+
+- `Joint`: Joint autoregressive and hierarchical priors for learned image compression
+
+- `Cheng2020Attention`: Learned image compression with discretized gaussian mixture likelihoods and attention modules
+
+- `HyperGlobalModule`: Hyper+GA
+
+- `FactorGlobalModule`: Factor+GA
 ### Training
 An exemplary  training script with a rate-distortion loss is provided in
 `train.py`. 
@@ -138,6 +162,9 @@ RD curves on 20 test Images
 ![AveragePreprocessing_rd](asserts/AverageRdcurvePreprocessed.png)
 ![AverageReordering_rd](asserts/AverageRdcurveReordering.png)
 
+If you have any problem, please contact me: tkd20@mails.tsinghua.edu.cn
+
+If you think it is useful for your reseach, please cite our TMM2023 paper.
 ## Citation
 ```
 
