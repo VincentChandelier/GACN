@@ -13,14 +13,14 @@ python Inference.py --dataset ./dataset/FullTest --output_path ChengAttention001
 python Inference.py --dataset ./dataset/FullTest --output_path Cheng2020Attention0005_48 -m Cheng2020Attention -p ./updatedCheckpoint/Cheng2020Attention0005_48.pth.tar --patch 384
 python Inference.py --dataset ./dataset/FullTest --output_path Cheng2020Attention0001_48 -m Cheng2020Attention -p ./updatedCheckpoint/Cheng2020Attention0001_48.pth.tar --patch 384
 ##Factor
-python Inference.py --dataset ./dataset/FullTest --output_path Factor01_99 -m Factor -p ./updatedCheckpoint/factor01_99.pth.tar --patch 384
+python Inference.py --dataset ./dataset/FullTest --output_path Factor01 -m Factor -p ./updatedCheckpoint/factor01.pth.tar --patch 384
 python Inference.py --dataset ./dataset/FullTest --output_path Factor005_49 -m Factor -p ./updatedCheckpoint/Factor005_49.pth.tar --patch 384
 python Inference.py --dataset ./dataset/FullTest --output_path Factor0025_46 -m Factor -p ./updatedCheckpoint/Factor0025_46.pth.tar --patch 384
 python Inference.py --dataset ./dataset/FullTest --output_path Factor001_49 -m Factor -p ./updatedCheckpoint/Factor001_49.pth.tar --patch 384
 python Inference.py --dataset ./dataset/FullTest --output_path Factor0005_49 -m Factor -p ./updatedCheckpoint/Factor0005_49.pth.tar --patch 384
 python Inference.py --dataset ./dataset/FullTest --output_path Factor0001_49 -m Factor -p ./updatedCheckpoint/Factor0001_49.pth.tar --patch 384
 ##Hyper
-python Inference.py --dataset ./dataset/FullTest --output_path Hyper01_99 -m Hyper -p ./updatedCheckpoint/Hyper01_99.pth.tar --patch 384
+python Inference.py --dataset ./dataset/FullTest --output_path Hyper01 -m Hyper -p ./updatedCheckpoint/Hyper01.pth.tar --patch 384
 python Inference.py --dataset ./dataset/FullTest --output_path Hyper005_48 -m Hyper -p ./updatedCheckpoint/Hyper005_48.pth.tar --patch 384
 python Inference.py --dataset ./dataset/FullTest --output_path Hyper0025_46 -m Hyper -p ./updatedCheckpoint/Hyper0025_46.pth.tar --patch 384
 python Inference.py --dataset ./dataset/FullTest --output_path Hyper001_47 -m Hyper -p ./updatedCheckpoint/Hyper001_47.pth.tar --patch 384
