@@ -124,6 +124,8 @@ python Inference.py --dataset /path/to/image/folder/ --output_path /path/to/reco
 ```
 More details can refer to Inference.sh
 
+Run the *./Rendering/SubapertureImageDistortion.m* to rendering the sub-aperture images from reconstructed focused plenoptic images and calculate the distortion.
+
 
 ### Pretrained Models
 Pretrained models (optimized for MSE) trained from focused plenoptic image patches are available.
