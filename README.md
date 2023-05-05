@@ -5,9 +5,11 @@ Preprocessing and Global Attention". IEEE Transactions on Multimedia 2023.
 This repository is based on [CompressAI](https://github.com/InterDigitalInc/CompressAI). 
 We kept scripts for training and evaluation, and removed other components. 
  For the official code release, see the [CompressAI](https://github.com/InterDigitalInc/CompressAI).
-
+## Related links
+ * CompressAI: https://github.com/InterDigitalInc/CompressAI
+ * GACN-QVRF (variable rate model of GACN) : https://github.com/VincentChandelier/GACN-QVRF
 ## Table of Contents
-- [Available data](#Available data)
+- [AvailableData](#AvailableData)
 - [Dataset](#Dataset)
 - [Rendering](Rendering)
 - [Global Attention Compression Network (GACN)](#Global Attention Compression Network (GACN))
@@ -15,7 +17,7 @@ We kept scripts for training and evaluation, and removed other components.
 This repo defines the focused plenoptic image dataset “FPI2k" and the global-attention-based models for learned focused plenoptic image compression in "Learned Focused Plenoptic Image Compression with Microimage 
 Preprocessing and Global Attention".
 
-# Available data
+# AvailableData
  Data |  Link                                                                                              |
 | ----|---------------------------------------------------------------------------------------------------|
 | FPI2k original images | [FPI2k original images](https://pan.baidu.com/s/1CQ9hKhxY1z-sIHsqr00XXg?pwd=xya8)    |
@@ -178,7 +180,6 @@ If you think it is useful for your reseach, please cite our TMM2023 paper.
 }
 ```
 
-## Related links
- * CompressAI: https://github.com/InterDigitalInc/CompressAI
+
 
 
