@@ -64,12 +64,12 @@ The directory Rendering provided the rendering code to render sub-aperture image
 Download the [TSPC white image coefficients](https://drive.google.com/file/d/1jaC2OsIWTVjTBicbBOrEr8-T1o4ZuTh0/view?usp=sharing)
 in *./Rendering/FocusedPlenopticRendering* for devigneting.
 
-Run the *./Rendering/Original2SAI.m* to rendering the sub-aperture images from original focused plenoptic images.
+Run the *./Rendering/Original2SAI.m* to render the sub-aperture images from original focused plenoptic images.
 
-Run the *./Rendering/Original2Preprocessed.m* to preprocess the original focused plenoptic images to preprocessd 
+Run the *./Rendering/Original2Preprocessed.m* to preprocess the original focused plenoptic images to preprocess 
 focused plenoptic images.
 
-Run the *./Rendering/Preprocessed2SAI.m* to rendering the sub-aperture images from preprocessd focused plenoptic images.
+Run the *./Rendering/Preprocessed2SAI.m* to render the sub-aperture images from preprocessed focused plenoptic images.
 
 # Global Attention Compression Network (GACN)
 ![](asserts/Network.png)
