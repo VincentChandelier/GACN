@@ -172,12 +172,15 @@ If you have any problem, please contact me: tkd20@mails.tsinghua.edu.cn
 If you think it is useful for your reseach, please cite our TMM2023 paper.
 ## Citation
 ```
-@article{tong2023learned,
-  title={Learned Focused Plenoptic Image Compression with Microimage Preprocessing and Global Attention},
+@ARTICLE{10120973,
   author={Tong, Kedeng and Jin, Xin and Yang, Yuqing and Wang, Chen and Kang, Jinshi and Jiang, Fan},
-  journal={arXiv preprint arXiv:2305.00489},
-  year={2023}
-}
+  journal={IEEE Transactions on Multimedia}, 
+  title={Learned Focused Plenoptic Image Compression with Microimage Preprocessing and Global Attention}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-14},
+  doi={10.1109/TMM.2023.3272747}}
 ```
 
 
