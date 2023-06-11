@@ -143,7 +143,15 @@ Pretrained models (optimized for MSE) trained from focused plenoptic image patch
 
 All the checkpoints are available at：https://pan.baidu.com/s/1hsFpQic6bMRZFvcmbAN7-g?pwd=54rv, access code：54rv
 
+
 ## Results
+
+### Note 
+The distortion and bpp are defined to ensure comparison fairness of different compression input formats for original-plenoptic-image compression, preprocessed-plenoptic-image compression, and sub-aperture-image compression.
+
+The distortion between the reference sub-aperture images and the reconstructed sub-aperture images is measured by the average of PSNR or MS-SSIM of each sub-aperture image.
+
+The bitrate is defined by bit-per-pixel (bpp) which is calculated via dividing the number of consumed bits by the total number of pixels of the original plenoptic image which is 4080x3068. 
 
 ### Visualization
 
