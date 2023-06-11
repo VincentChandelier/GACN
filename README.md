@@ -167,10 +167,11 @@ RD curves on 20 test Images
 ![AveragePreprocessing_rd](asserts/AverageRdcurvePreprocessed.png)
 ![AverageReordering_rd](asserts/AverageRdcurveReordering.png)
 
+
+## Citation
 If you have any problem, please contact me: tkd20@mails.tsinghua.edu.cn
 
 If you think it is useful for your reseach, please cite our TMM2023 paper.
-## Citation
 ```
 @ARTICLE{10120973,
   author={Tong, Kedeng and Jin, Xin and Yang, Yuqing and Wang, Chen and Kang, Jinshi and Jiang, Fan},
